@@ -14,16 +14,26 @@
 .nav-button {
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
+    border-radius: 50px;
+    padding: 12px 24px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: rgba(0, 212, 255, 0.05);
 }
 
 .nav-button.active {
     border-bottom-color: var(--color-accent);
     color: var(--color-accent);
+    background: rgba(0, 212, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 .nav-button:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-hover);
+    background: rgba(92, 228, 255, 0.2);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(92, 228, 255, 0.4);
 }
 
 
@@ -35,14 +45,18 @@
 .section-card {
     background: var(--color-card-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--color-card-border);
+    border: 2px solid var(--color-card-border);
+    border-radius: 20px;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .section-card:hover {
     background: var(--color-card-hover);
     border-color: var(--color-card-border-hover);
-    box-shadow: 0 8px 32px var(--color-accent-shadow);
+    box-shadow: 0 0 40px var(--color-accent-shadow), 0 8px 32px rgba(0, 212, 255, 0.2);
+    transform: translateY(-5px);
 }
 
 .section {
@@ -115,16 +129,23 @@
 */
 
 .chart-container {
-    background: rgba(2, 64, 53, 0.8);
-    border-radius: 16px;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-card-border);
+    border-radius: 20px;
     padding: 24px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    box-shadow: 0 0 30px var(--color-accent-shadow);
+    border-color: var(--color-accent);
 }
 
 .chart-container img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 
@@ -170,14 +191,34 @@
 */
 
 .metric-card {
-    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(246, 226, 173, 0.05) 100%);
-    border: 1px solid var(--color-accent-border);
-    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 2px solid var(--color-accent-border);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.metric-card:hover::before {
+    opacity: 1;
 }
 
 .metric-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--color-accent-shadow);
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px var(--color-accent-shadow);
+    border-color: var(--color-accent);
 }
 
 
@@ -191,9 +232,9 @@
     background-color: var(--color-card-bg);
     border: 2px solid var(--color-accent-border);
     color: var(--color-text);
-    padding: 12px 16px;
-    padding-right: 40px;
-    border-radius: 8px;
+    padding: 12px 20px;
+    padding-right: 45px;
+    border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -201,9 +242,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F6E2AD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300d4ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: right 12px center;
+    background-position: right 15px center;
     background-size: 20px;
 }
 
@@ -214,29 +255,30 @@
 }
 
 .player-select:hover {
-    border-color: var(--color-accent);
+    border-color: var(--color-accent-hover);
     background-color: var(--color-accent-light);
+    box-shadow: 0 0 20px var(--color-accent-shadow);
 }
 
 .player-select:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px var(--color-accent-border);
+    box-shadow: 0 0 0 4px var(--color-accent-border);
 }
 
 /* Player comparison cards */
 .player-card {
-    background: linear-gradient(135deg, rgba(246, 226, 173, 0.08) 0%, rgba(2, 64, 53, 0.8) 100%);
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-secondary) 100%);
     border: 2px solid var(--color-accent-border);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 24px;
     transition: all 0.3s ease;
 }
 
 .player-card:hover {
     border-color: var(--color-accent);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(246, 226, 173, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px var(--color-accent-shadow);
 }
 
 /* Statistics rows */
@@ -249,7 +291,7 @@
 }
 
 .stat-row:hover {
-    background-color: rgba(246, 226, 173, 0.05);
+    background-color: var(--color-accent-light);
 }
 
 .stat-row:last-child {
@@ -264,26 +306,28 @@
 
 /* Swap players button */
 .swap-button {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #D4C68D 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
     color: var(--color-primary-bg);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
+    border: 2px solid var(--color-accent);
+    padding: 14px 32px;
+    border-radius: 50px;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 20px var(--color-accent-shadow);
 }
 
 .swap-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(246, 226, 173, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 40px var(--color-accent-shadow), 0 8px 20px rgba(0, 212, 255, 0.5);
+    background: linear-gradient(135deg, var(--color-accent-hover) 0%, var(--color-accent) 100%);
 }
 
 .swap-button:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 

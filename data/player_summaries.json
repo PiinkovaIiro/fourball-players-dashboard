@@ -1,138 +1,138 @@
 {
-  "Hovland, Viktor": {
-    "bio": "The 26-year-old Norwegian star has established himself as one of the top young international players on the PGA Tour, making history as the first Norwegian to win on tour. Hovland's breakthrough came with victories at the 2020 Puerto Rico Open and Mayakoba Golf Classic, and he has since added multiple PGA Tour wins while also representing Team Europe in the Ryder Cup. With an overall strokes gained total of 1.56 across 224 analyzed rounds, he consistently performs at an elite level against top competition.",
-    "strengths": "Hovland's greatest weapon is his approach play, gaining 0.88 strokes per round on the field with his iron game, supported by solid tee-to-green performance at 0.86 strokes gained. His recent form has been exceptional, averaging 2.02 strokes gained over his last 20 rounds compared to 1.16 over his last 100, indicating significant improvement. The simulation projects him as a strong contender with a 7.5% win probability and 52.6% chance of a top-10 finish in this 54-player field.",
-    "weaknesses": "Around-the-green play represents Hovland's primary weakness, losing 0.10 strokes per round to the field in short game situations. His consistency can also be a concern with a standard deviation of 2.54, suggesting he can experience volatile rounds that hurt his scoring potential.",
-    "recent_form": "Hovland is riding a wave of exceptional form, with his last 20 rounds (2.02 SG) significantly outperforming his last 50 (1.69 SG) and last 100 rounds (1.16 SG). This upward trajectory suggests he's playing some of the best golf of his career and entering tournaments with tremendous confidence.",
-    "playing_style": "Hovland employs a precision-based approach built around elite iron play, using his 0.88 strokes gained on approach shots to set up scoring opportunities. While his driving is relatively modest at 0.08 strokes gained off the tee, his tee-to-green excellence allows him to compete with anyone when his putter cooperates.",
+  "Player 1": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 1.56"
   },
-  "Aberg, Ludvig": {
-    "bio": "The 25-year-old Swedish sensation turned professional in 2023 after a notable college career at Texas Tech University and has achieved a meteoric rise in professional golf. \u00c5berg made an immediate impact by earning selection for Team Europe's 2023 Ryder Cup and has established himself as a PGA Tour winner with consistently strong statistical performance (1.45 F_SG_Total). His rapid ascension to the upper echelons of professional golf showcases exceptional talent across all facets of the game.",
-    "strengths": "\u00c5berg's greatest asset is his driving ability, gaining 0.53 strokes off the tee while maintaining solid tee-to-green performance at 0.68 F_SG_T2G. His tournament simulation projects strong upside potential with a 7.4% win probability and 49.4% chance of finishing top-10 in elite fields. The Swede demonstrates well-rounded skills with positive strokes gained in driving, approach play (0.14), and putting (0.13).",
-    "weaknesses": "Around-the-green play represents \u00c5berg's only statistical weakness, losing 0.01 strokes per round in short game situations. His consistency standard deviation of 2.71 suggests occasional volatile rounds that can derail otherwise strong tournament performances.",
-    "recent_form": "\u00c5berg is trending sharply upward, with his last 20 rounds averaging 1.94 F_SG_Total compared to 1.49 over his last 50 rounds and 1.22 over his last 100 rounds. This ascending trajectory indicates he's elevating his game to new heights and entering tournaments in peak form.",
-    "playing_style": "\u00c5berg employs a power-based approach built around his strong driving (0.53 F_SG_OTT) that sets up scoring opportunities throughout his rounds. His balanced skill set allows him to compete effectively across different course setups, though he relies more on ball-striking than short game wizardry.",
+  "Player 2": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 1.45"
   },
-  "Neergaard-Petersen, Rasmus": {
-    "bio": "Rasmus Neergaard-Petersen is a Danish professional golfer who competes on the DP World Tour. With limited publicly available career details, his statistical profile reveals a competitive player maintaining a strong +1.06 strokes gained overall across 137 analyzed rounds, positioning him as a solid performer on the European circuit.",
-    "strengths": "Neergaard-Petersen excels from tee to green with an impressive +1.35 F_SG T2G, driven by solid off-the-tee performance (+0.69 F_SG OTT) and reliable approach play (+0.58 F_SG APP). His tournament simulation projects a 3.1% win probability with 37.6% top-10 odds and an average finish of 16.5th position in a 54-player LIV Golf field, indicating consistent competitive positioning.",
-    "weaknesses": "His short game represents the weakest aspect of his performance, with minimal gains around the green (+0.11 F_SG ARG) and on the greens (+0.06 F_SG PUTT). A consistency standard deviation of 2.34 suggests moderate volatility in his round-to-round performance.",
-    "recent_form": "Neergaard-Petersen shows mixed recent trends with his last 20 rounds averaging +1.14 F_SG compared to +0.96 over his last 50 rounds, indicating slight improvement in his most recent play. However, his longer-term 100-round average of +1.22 suggests he's performing slightly below his established baseline over the medium term.",
-    "playing_style": "Neergaard-Petersen employs a tee-to-green focused approach, relying heavily on his ball-striking abilities rather than short game wizardry. His statistical profile suggests a player who builds scoring opportunities through quality approach shots and solid driving, though he must capitalize efficiently given his limited putting edge.",
+  "Player 3": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 1.06"
   },
-  "Hojgaard, Rasmus": {
-    "bio": "The 22-year-old Danish professional has established himself as one of the brightest young talents on the DP World Tour, with multiple European Tour victories already to his name. Part of the talented Hojgaard twin duo alongside brother Nicolai, Rasmus turned professional as a teenager and quickly made his mark on the European circuit. His solid statistical profile shows an overall strokes gained total of 1.04, demonstrating consistent above-average performance across 252 analyzed rounds.",
-    "strengths": "Hojgaard's greatest asset is his driving ability, gaining 0.52 strokes off the tee, which sets up scoring opportunities throughout his rounds. His tee-to-green game is particularly strong at 0.68 strokes gained, combining solid driving with decent approach play (0.25 SG). The simulation projects him as a legitimate contender with a 4.1% win probability and 37.9% chance of finishing top-10 in a 54-player LIV field.",
-    "weaknesses": "Around-the-green play represents his primary weakness, losing 0.04 strokes per round in this crucial scoring area. His consistency can also be a concern with a standard deviation of 2.63, indicating more volatile performances that could hurt him in key moments of tournaments.",
-    "recent_form": "Hojgaard is displaying excellent current form, with his last 20 rounds averaging 1.63 strokes gained compared to 1.06 over his last 50 rounds and 0.82 over his last 100. This clear upward trajectory suggests he's playing some of the best golf of his career and entering tournaments with significant momentum.",
-    "playing_style": "Hojgaard employs a power-based approach built around his strong driving, using length and accuracy off the tee to create advantages before approaching greens. His tee-to-green strength suggests he prefers to avoid relying on short-game recovery, instead positioning himself for straightforward scoring opportunities.",
+  "Player 4": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 1.04"
   },
-  "Reitan, Kristoffer": {
-    "bio": "Kristoffer Reitan is a Norwegian professional golfer competing at an elite level with strong statistical performance metrics. With limited public information available about his career achievements, his data profile suggests he's a skilled competitor capable of contending in high-level tournaments. His overall strokes gained of +0.90 indicates consistent above-average performance across 111 analyzed rounds.",
-    "strengths": "Reitan excels in his tee-to-green game with a strong +0.87 F_SG T2G, powered by impressive driving (+0.72 F_SG OTT) and solid approach play (+0.38 F_SG APP). His tournament simulation shows excellent competitive potential with a 4.8% win probability and 36.3% top-10 probability in a 54-player LIV Golf field, projecting to an average finish of 18.4.",
-    "weaknesses": "Around-the-green play represents Reitan's primary weakness at -0.20 F_SG ARG, indicating struggles with short game situations. His consistency standard deviation of 2.86 suggests some volatility in performance round-to-round.",
-    "recent_form": "Reitan's recent form shows some decline from his peak performance, with his last 20 rounds averaging +0.87 F_SG compared to +1.13 over his last 50 rounds. However, his recent play still significantly outperforms his longer-term average of +0.46 over 100 rounds, indicating sustained improvement in his game.",
-    "playing_style": "Reitan employs a power-based approach built around strong driving and solid iron play, with his tee-to-green excellence (+0.87 F_SG T2G) forming the foundation of his scoring. His strategy likely focuses on aggressive positioning off the tee to set up scoring opportunities while managing around-the-green situations more conservatively.",
+  "Player 5": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.90"
   },
-  "Olesen, Thorbjorn": {
-    "bio": "The 34-year-old Danish professional has established himself as a consistent presence on the European Tour/DP World Tour with multiple victories including the 2018 Italian Open and 2016 Sicilian Open. Olesen earned Team Europe selection for the 2018 Ryder Cup and has represented Denmark in the World Cup of Golf, demonstrating his ability to perform at the highest levels of professional golf.",
-    "strengths": "Olesen shows well-rounded statistical performance with a solid overall F_SG_Total of 0.59, particularly excelling in putting (0.37) and tee-to-green play (0.45). His tournament simulation projects strong finishing potential with a 27.6% probability of top-10 finishes and 13.4% chance of top-5 results, reflecting his ability to consistently contend.",
-    "weaknesses": "Around the green represents his weakest area at just 0.01 strokes gained, indicating limited short game advantages over the field. His consistency standard deviation of 2.52 suggests moderate round-to-round variance that could impact his ability to sustain momentum during tournaments.",
-    "recent_form": "Olesen is trending positively with his last 20 rounds averaging 0.97 strokes gained, a significant improvement from his 50-round average of 0.50. This recent uptick of nearly half a stroke per round improvement suggests he's finding better form and timing heading into competition.",
-    "playing_style": "His statistical profile reveals a balanced, tee-to-green focused approach with particular strength in putting that helps offset any ball-striking limitations. Olesen appears to rely on solid course management and strong putting performance rather than overpowering courses, fitting his established European Tour pedigree.",
+  "Player 6": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.59"
   },
-  "Brown, Daniel": {
-    "bio": "Daniel Brown is an English professional golfer competing on the European Tour/DP World Tour circuit. With an overall strokes gained average of 0.55 across 244 analyzed rounds, Brown has established himself as a consistent competitor on European circuits, demonstrating the ability to compete at the highest levels of professional golf.",
-    "strengths": "Brown excels in his tee-to-green play with a strong F_SG_T2G of 0.51, supported by solid off-the-tee performance (0.32) and approach play (0.24). His tournament simulation shows promising competitive potential with a 3.9% win probability, 16.8% top-5 probability, and 30.1% top-10 probability in a 54-player LIV Golf field format.",
-    "weaknesses": "Brown's primary weakness lies in his short game around the green, posting a negative F_SG_ARG of -0.09. His consistency can also be a concern with a standard deviation of 3.04, indicating some volatility in his round-to-round performance.",
-    "recent_form": "Brown is displaying excellent recent form with his last 20 rounds averaging 1.19 strokes gained, significantly improved from his last 50 rounds (0.58) and last 100 rounds (0.29). This upward trajectory suggests he has found something in his game and is currently playing some of the best golf of his measured period.",
-    "playing_style": "Brown employs a tee-to-green focused approach, relying on his driving accuracy and iron play to set up scoring opportunities. His statistical profile suggests a player who builds rounds through consistent ball-striking rather than relying on exceptional short game recovery or putting streaks.",
+  "Player 7": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.55"
   },
-  "Dumont de Chassart, Adrien": {
-    "bio": "Adrien Dumont de Chassart is a Belgian professional golfer competing on the DP World Tour, having transitioned from a notable amateur career where he represented Belgium in international competition. With an overall strokes gained total of 0.55 across 225 analyzed rounds, he has established himself as a competitive player on the European circuit. His statistical profile shows him performing above tour average overall, demonstrating the skills that earned him professional status.",
-    "strengths": "Dumont de Chassart's primary strength lies in his overall scoring ability with a positive F_SG_Total of 0.55, indicating above-average performance relative to the field. His putting is essentially neutral at 0.01 strokes gained, showing solid short game fundamentals. In tournament simulation against a strong 54-player LIV Golf field, he projects to a 3.4% win probability with 28.9% odds of finishing top-10, reflecting competitive potential in elite fields.",
-    "weaknesses": "His biggest challenges come from tee to green play, with a concerning T2G value of -0.97 strokes lost per round, driven by weaknesses off the tee (-0.42) and on approach shots (-0.43). Additionally, his consistency standard deviation of 2.88 suggests somewhat volatile round-to-round performance that can limit his ceiling in tournaments.",
-    "recent_form": "Dumont de Chassart is showing excellent recent form, with his last 20 rounds averaging 1.17 strokes gained compared to 0.55 over his last 50 rounds and 0.34 over his last 100 rounds. This clear upward trajectory suggests he has made significant improvements to his game and is currently playing at a career-best level.",
-    "playing_style": "Based on his statistical profile, Dumont de Chassart appears to be a player who relies on strong overall course management and putting to compensate for ball-striking limitations. His game style likely emphasizes strategic positioning and short game recovery rather than overpowering courses with distance and precision.",
+  "Player 8": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.55"
   },
-  "Perez, Victor": {
-    "bio": "Victor Perez is a 31-year-old French professional golfer who competes on the DP World Tour and has made appearances on the PGA Tour. The Frenchman captured his breakthrough European Tour victory at the 2019 Alfred Dunhill Links Championship. His statistical profile shows solid overall performance with a +0.47 strokes gained total and low variance in his scoring.",
-    "strengths": "Perez excels in his approach play, gaining +0.47 strokes per round on approach shots, which matches his overall scoring advantage. He also shows solid putting performance at +0.32 strokes gained and maintains decent tee-to-green play at +0.28 strokes gained. In tournament simulation, he projects to a 23.2% top-10 probability with a 1.2% win chance in a 54-player LIV Golf field.",
-    "weaknesses": "His primary weakness lies around the green, where he loses -0.27 strokes per round, significantly impacting his scoring potential. Perez also struggles off the tee with minimal gains at just +0.07 strokes gained, and his consistency rating of 2.27 standard deviation indicates moderate volatility in his performance.",
-    "recent_form": "Perez is showing positive momentum with his last 20 rounds averaging +0.56 strokes gained compared to +0.48 over his last 50 rounds and +0.41 over his last 100 rounds. This upward trajectory from +0.41 to +0.56 suggests he's playing some of his best golf recently and building confidence heading into competition.",
-    "playing_style": "Perez employs an approach-focused game, relying heavily on his iron play to create scoring opportunities rather than overpowering courses with his driver. His statistical profile suggests a precision-based strategy where he prioritizes hitting greens in regulation and capitalizing with solid putting, while managing his short game limitations around the greens.",
+  "Player 9": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.47"
   },
-  "Smith, Jordan": {
-    "bio": "Jordan Smith is an English professional golfer who competes primarily on the European Tour/DP World Tour circuit. With a solid overall strokes gained average of 0.38 across 285 analyzed rounds, Smith has established himself as a competitive player on the European professional golf scene.",
-    "strengths": "Smith's greatest asset is his tee-to-green performance with an impressive 1.04 strokes gained, anchored by strong off-the-tee play at 0.48 F_SG. His well-rounded game includes solid approach shots (0.21 F_SG) and around-the-green skills (0.29 F_SG), translating to an 11.7% top-5 probability and 23.9% top-10 probability in tournament simulations.",
-    "weaknesses": "Putting represents Smith's primary weakness with only 0.10 strokes gained, limiting his scoring potential. His consistency can also be problematic with a standard deviation of 2.75, indicating more volatile round-to-round performance than elite competitors.",
-    "recent_form": "Smith is experiencing a concerning dip in recent form, with his last 20 rounds averaging -0.26 compared to his stronger 50-round (0.48) and 100-round (0.41) averages. This recent decline suggests he may be working through technical or confidence issues that could impact his tournament performance.",
-    "playing_style": "Smith employs a tee-to-green focused approach, relying on his driving accuracy and iron play to create scoring opportunities rather than exceptional putting. His statistical profile suggests a methodical player who builds rounds through consistent ball-striking rather than spectacular short-game recoveries.",
+  "Player 10": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.38"
   },
   "Valimaki, Sami": {
-    "bio": "Sami V\u00e4lim\u00e4ki is a 25-year-old Finnish professional golfer who competes on the European Tour/DP World Tour. The established tour competitor has multiple European Tour victories to his name, including a win at the Oman Open, and has built his professional career after a notable amateur stint in Finland.",
-    "strengths": "V\u00e4lim\u00e4ki excels on the greens with an impressive putting strokes gained of +0.50, ranking among his strongest skills alongside solid approach play at +0.39 strokes gained. His tournament simulation shows consistent competitive potential with a 22.0% top-10 probability and 10.4% chance of finishing in the top-5, reflecting his ability to contend regularly.",
+    "bio": "Sami Välimäki is a 25-year-old Finnish professional golfer who competes on the European Tour/DP World Tour. The established tour competitor has multiple European Tour victories to his name, including a win at the Oman Open, and has built his professional career after a notable amateur stint in Finland.",
+    "strengths": "Välimäki excels on the greens with an impressive putting strokes gained of +0.50, ranking among his strongest skills alongside solid approach play at +0.39 strokes gained. His tournament simulation shows consistent competitive potential with a 22.0% top-10 probability and 10.4% chance of finishing in the top-5, reflecting his ability to contend regularly.",
     "weaknesses": "His biggest weakness comes off the tee where he loses -0.32 strokes gained, while also struggling around the greens at -0.15 strokes gained. A consistency standard deviation of 2.72 indicates some volatility in his round-to-round performance.",
-    "recent_form": "V\u00e4lim\u00e4ki's recent form shows some decline, with his last 20 rounds averaging just +0.04 strokes gained compared to +0.35 over his last 50 rounds. This represents a notable drop from his stronger mid-term performance, though his last 100 rounds average of -0.02 suggests he's still finding his overall rhythm.",
-    "playing_style": "V\u00e4lim\u00e4ki employs a precision-based approach built around exceptional putting and solid iron play, compensating for driving limitations. His statistical profile suggests a player who relies on accuracy and short-game skills rather than power, making him well-suited for courses that reward strategic positioning over distance.",
+    "recent_form": "Välimäki's recent form shows some decline, with his last 20 rounds averaging just +0.04 strokes gained compared to +0.35 over his last 50 rounds. This represents a notable drop from his stronger mid-term performance, though his last 100 rounds average of -0.02 suggests he's still finding his overall rhythm.",
+    "playing_style": "Välimäki employs a precision-based approach built around exceptional putting and solid iron play, compensating for driving limitations. His statistical profile suggests a player who relies on accuracy and short-game skills rather than power, making him well-suited for courses that reward strategic positioning over distance.",
     "key_stat": "F_SG_Total: 0.21"
   },
-  "Detry, Thomas": {
-    "bio": "The 30-year-old Belgian professional has established himself as a prominent figure on both the European Tour/DP World Tour and PGA Tour, with multiple European Tour victories to his name. He represents one of Belgium's most accomplished golfers on the international stage, with consistent performances on both sides of the Atlantic. His overall statistical profile shows a slightly above-average performer with an F_SG_Total of 0.19 across 296 analyzed rounds.",
-    "strengths": "Detry's primary strength lies in his driving, posting a positive 0.03 strokes gained off the tee, which provides a solid foundation for his scoring opportunities. His tournament simulation results show respectable competitive potential with a 17.6% probability of finishing in the top 10 and 7.0% chance of a top-5 finish in strong fields. The Belgian's overall positive F_SG_Total of 0.19 demonstrates his ability to compete effectively at the highest professional levels.",
-    "weaknesses": "Detry struggles significantly with his approach play, losing -0.27 strokes gained to the field, which limits his ability to create prime scoring chances. His tee-to-green performance combines to -0.34 strokes gained, while putting (-0.14) and short game (-0.11) also drag down his overall scoring, with consistency being an additional concern at 2.31 standard deviation.",
-    "recent_form": "Detry's recent form shows a concerning downward trend, with his last 20 rounds averaging -0.17 strokes gained compared to a much stronger 0.37 average over his last 100 rounds. This recent decline from his longer-term positive performance (0.16 over last 50 rounds) suggests he may be working through some technical or confidence issues in his current game.",
-    "playing_style": "Detry employs a driving-dependent style, relying on his solid tee shots (0.03 SG) to set up manageable approach opportunities despite his approach play weaknesses. His game plan likely focuses on course management and positioning rather than aggressive pin-hunting, given his struggles with iron play and around-the-green execution.",
+  "Player 11": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.19"
   },
-  "Lahiri, Anirban": {
-    "bio": "The 36-year-old Indian golfer has established himself as one of India's most prominent professionals on the international stage, competing successfully across the PGA Tour, Asian Tour, and European Tour throughout his career. Lahiri represented India in Olympic golf competition and has secured multiple professional victories on the Asian Tour, demonstrating consistent competitiveness at the highest levels of professional golf.",
-    "strengths": "Lahiri's biggest asset is his tee-to-green play, posting an impressive 0.47 strokes gained T2G, with particular strength around the greens where he gains 0.22 strokes per round. His off-the-tee performance also contributes positively at 0.16 strokes gained, and the simulation projects him as a legitimate contender with an 11.6% top-5 probability and 23.5% chance of a top-10 finish.",
-    "weaknesses": "Putting represents Lahiri's primary weakness, gaining only 0.04 strokes per round on the greens, while his approach play is also modest at 0.08 strokes gained. His consistency can be variable with a standard deviation of 2.92, indicating occasional volatile rounds that can derail strong tournament positions.",
-    "recent_form": "Lahiri's recent form shows a concerning downward trend, with his last 20 rounds averaging exactly even (0.00) compared to a much stronger 0.39 average over his last 100 rounds. This recent plateau suggests he may be working through some technical or confidence issues after previously solid play.",
-    "playing_style": "Lahiri employs a methodical, tee-to-green focused approach that relies heavily on his short game prowess and solid driving to set up scoring opportunities. His statistical profile suggests a player who positions himself well for birdies through course management and scrambling ability, though he must capitalize more efficiently on the putting surface.",
+  "Player 12": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.15"
   },
-  "Bland, Richard": {
-    "bio": "Richard Bland, the 50-year-old English professional, made golf history by winning the 2021 U.S. Open at Torrey Pines at age 48, becoming one of the oldest first-time major winners in modern golf. After a long European Tour career spanning multiple decades, his major breakthrough earned him PGA Tour membership and cemented his place among golf's most inspiring late-career success stories. His current statistical profile shows an overall F_SG_Total of 0.08, indicating solid tour-level performance across 138 analyzed rounds.",
-    "strengths": "Bland excels in his approach play and tee-to-green performance, both posting strong F_SG values of 0.29, demonstrating excellent iron play and course management. His around-the-green skills are also above average at 0.21 F_SG, while his putting contributes positively at 0.12 F_SG. In tournament simulations against a 54-player LIV Golf field, he shows solid finishing potential with a 19.3% top-10 probability and 8.9% chance of a top-5 finish.",
-    "weaknesses": "His primary weakness lies off the tee with a negative F_SG of -0.21, suggesting driving distance or accuracy issues that put pressure on other areas of his game. Additionally, his consistency rating of 2.62 standard deviation indicates somewhat variable round-to-round performance.",
-    "recent_form": "Bland's recent form shows a concerning downward trend, with his last 20 rounds averaging -0.40 F_SG compared to 0.00 over his last 50 rounds and a strong 0.41 over his last 100 rounds. This trajectory suggests he may be struggling with current form despite historically solid performance metrics.",
-    "playing_style": "Bland employs a precision-based approach built around strong iron play and short game skills, with his 0.29 F_SG in both approach and tee-to-green categories indicating he relies on accuracy rather than power. His game plan likely focuses on positioning and course management to overcome driving limitations while capitalizing on scoring opportunities through excellent approach shots.",
+  "Player 13": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: 0.08"
   },
-  "Couvra, Martin": {
-    "bio": "Martin Couvra is a professional golfer whose statistical profile suggests he competes at a high level with 87 rounds of analyzed data. While detailed biographical information is limited, his performance metrics indicate he's an active tournament player with particular strength in his approach play and tee-to-green game.",
-    "strengths": "Couvra's biggest asset is his approach play, gaining 0.57 strokes per round on approach shots, complemented by solid off-the-tee performance at +0.12 strokes gained. His tee-to-green game is impressive at +0.61 strokes gained, and tournament simulations project him as a consistent performer with an 18.5% top-10 probability and 8.5% chance of finishing top-5 in elite fields.",
-    "weaknesses": "Putting and short game represent clear areas for improvement, with both around-the-green play and putting costing him -0.06 strokes per round. His overall consistency could also be better, with a standard deviation of 2.87 indicating more volatility in his scoring than ideal.",
-    "recent_form": "Couvra's recent form shows a concerning downward trend, with his last 20 rounds averaging -0.59 strokes gained compared to -0.08 over his last 50 rounds. This represents a significant decline from his longer-term average of +0.15 over 100 rounds, suggesting he may be working through some technical or confidence issues.",
-    "playing_style": "Couvra employs a tee-to-green focused approach, relying heavily on his iron play and solid driving to set up scoring opportunities. His statistical profile suggests he's most effective when he can minimize the impact of his weaker short game by hitting greens in regulation.",
+  "Player 14": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: -0.06"
   },
-  "Rottluff, Max": {
-    "bio": "Max Rottluff is a professional golfer competing at the highest levels, though detailed biographical information remains limited in public records. Based on his statistical profile across 111 analyzed rounds, he demonstrates the skill level to compete in elite tournament fields. His overall strokes gained performance of -0.19 indicates he's working to establish himself among the world's top players.",
-    "strengths": "Rottluff's strongest asset is his tee-to-green play (+0.18 F_SG), particularly excelling in approach shots (+0.13 F_SG) and maintaining slight gains off the tee (+0.04 F_SG). His around-the-green game remains solid at +0.01 F_SG, and tournament simulations show promising potential with an 8.3% top-5 probability and 17.0% chance of finishing in the top 10.",
-    "weaknesses": "Putting represents Rottluff's primary weakness at -0.22 F_SG, significantly hampering his overall scoring potential. His consistency standard deviation of 3.01 suggests he experiences notable round-to-round variation in performance.",
-    "recent_form": "Rottluff's recent form shows a concerning downward trend, with his last 20 rounds averaging -0.51 F_SG compared to -0.22 over his last 50 rounds and nearly even (-0.01) over his last 100 rounds. This recent decline suggests he may be struggling with form or facing increased competition levels.",
-    "playing_style": "Rottluff employs a tee-to-green focused approach, relying on solid ball-striking and approach play to create scoring opportunities. His statistical profile suggests a methodical player who builds rounds through consistent iron play but must overcome putting struggles to convert chances.",
+  "Player 15": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: -0.19"
   },
-  "Meronk, Adrian": {
-    "bio": "Adrian Meronk, the 30-year-old Polish professional, has established himself as a notable force on the European Tour/DP World Tour with multiple victories including the 2022 Irish Open. The first Polish golfer to win on the European Tour, Meronk earned his place on Europe's 2023 Ryder Cup team and has since gained PGA Tour playing privileges, competing at the highest levels of professional golf.",
-    "strengths": "Meronk's strongest asset is his putting, gaining 0.58 strokes per round on the greens - a significant advantage that helps offset weaknesses in other areas. In tournament simulations against elite 54-player fields, he maintains a solid 14.5% probability of finishing in the top 10 with an average finish position of 28.7, demonstrating consistent competitive presence.",
-    "weaknesses": "Meronk struggles significantly from tee to green (-0.56 F_SG), with particular weaknesses in approach play (-0.26) and around the green (-0.18). His overall consistency is also a concern with a standard deviation of 2.91, indicating more volatile round-to-round performance than elite players.",
-    "recent_form": "Meronk shows signs of improvement in his recent form, with his last 20 rounds averaging -0.49 strokes gained compared to -0.63 over his last 50 and 100 rounds. This upward trend suggests he may be finding better form and addressing some of the consistency issues that have limited his overall performance.",
-    "playing_style": "Meronk employs a putting-reliant game style, using exceptional work on the greens to compensate for below-average ball-striking from tee to green. His strategic approach likely focuses on getting into makeable positions rather than aggressive pin-hunting, maximizing opportunities for his superior putting skills to shine.",
+  "Player 16": {
+    "bio": "Professional golfer competing in the tournament with solid performance metrics.",
+    "strengths": "Consistent ball-striking and solid all-around game.",
+    "weaknesses": "Areas for improvement in scoring efficiency.",
+    "recent_form": "Steady recent performance with competitive results.",
+    "playing_style": "Balanced approach with emphasis on course management.",
     "key_stat": "F_SG_Total: -0.62"
   },
   "Horsfield, Sam": {
