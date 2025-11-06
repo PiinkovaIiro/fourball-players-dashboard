@@ -7,9 +7,15 @@ Includes unauthenticated /health endpoint for Railway healthchecks
 
 import os
 import base64
+import secrets
+import hashlib
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from functools import partial
+from http.cookies import SimpleCookie
 
+
+# Simple in-memory session storage
+SESSIONS = {}
 
 class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
     """HTTP Request Handler with Basic Authentication and Security Headers"""
@@ -17,6 +23,7 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, username=None, password=None, **kwargs):
         self.auth_username = username
         self.auth_password = password
+        self.session_cookie_to_set = None
         super().__init__(*args, **kwargs)
 
     def end_headers(self):
@@ -26,6 +33,10 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('X-XSS-Protection', '1; mode=block')
         self.send_header('Referrer-Policy', 'strict-origin-when-cross-origin')
+
+        # Set session cookie if needed
+        if self.session_cookie_to_set:
+            self.send_header('Set-Cookie', f'session={self.session_cookie_to_set}; Path=/; HttpOnly; SameSite=Lax; Max-Age=86400')
 
         # Cache headers for static assets
         if self.path.endswith(('.png', '.jpg', '.jpeg', '.css', '.js', '.json')):
@@ -47,8 +58,28 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
+    def check_session(self):
+        """Check if there's a valid session cookie"""
+        cookie_header = self.headers.get('Cookie')
+        if not cookie_header:
+            return False
+
+        cookies = SimpleCookie()
+        cookies.load(cookie_header)
+
+        if 'session' in cookies:
+            session_token = cookies['session'].value
+            return session_token in SESSIONS
+
+        return False
+
     def check_auth(self):
-        """Check if the provided credentials are valid"""
+        """Check if the provided credentials are valid or if there's a valid session"""
+        # First check for valid session cookie
+        if self.check_session():
+            return True
+
+        # Then check Basic Auth header
         auth_header = self.headers.get('Authorization')
 
         if auth_header is None:
@@ -70,7 +101,14 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
             return False
 
         # Verify credentials
-        return username == self.auth_username and password == self.auth_password
+        if username == self.auth_username and password == self.auth_password:
+            # Create new session
+            session_token = secrets.token_urlsafe(32)
+            SESSIONS[session_token] = {'username': username}
+            self.session_cookie_to_set = session_token
+            return True
+
+        return False
 
     def do_GET(self):
         """Handle GET requests with authentication (except /health and /login.html)"""
