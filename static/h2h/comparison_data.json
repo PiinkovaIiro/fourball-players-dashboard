@@ -1,5 +1,5 @@
 {
-  "Hovland, Viktor": {
+  "Player 1": {
     "F_SG_Total": 1.56,
     "F_SG_OTT": 0.08,
     "F_SG_APP": 0.88,
@@ -10,7 +10,7 @@
     "win_probability": 7.5,
     "avg_position": 12.9031
   },
-  "Aberg, Ludvig": {
+  "Player 2": {
     "F_SG_Total": 1.45,
     "F_SG_OTT": 0.53,
     "F_SG_APP": 0.14,
@@ -21,7 +21,7 @@
     "win_probability": 7.399999999999999,
     "avg_position": 13.9998
   },
-  "Neergaard-Petersen, Rasmus": {
+  "Player 3": {
     "F_SG_Total": 1.06,
     "F_SG_OTT": 0.69,
     "F_SG_APP": 0.58,
@@ -32,7 +32,7 @@
     "win_probability": 3.15,
     "avg_position": 16.5022
   },
-  "Hojgaard, Rasmus": {
+  "Player 4": {
     "F_SG_Total": 1.04,
     "F_SG_OTT": 0.52,
     "F_SG_APP": 0.25,
@@ -43,7 +43,7 @@
     "win_probability": 4.109999999999999,
     "avg_position": 17.2986
   },
-  "Reitan, Kristoffer": {
+  "Player 5": {
     "F_SG_Total": 0.9,
     "F_SG_OTT": 0.72,
     "F_SG_APP": 0.38,
@@ -54,7 +54,7 @@
     "win_probability": 4.79,
     "avg_position": 18.3775
   },
-  "Olesen, Thorbjorn": {
+  "Player 6": {
     "F_SG_Total": 0.59,
     "F_SG_OTT": 0.24,
     "F_SG_APP": 0.19,
@@ -65,7 +65,7 @@
     "win_probability": 2.06,
     "avg_position": 20.5034
   },
-  "Brown, Daniel": {
+  "Player 7": {
     "F_SG_Total": 0.55,
     "F_SG_OTT": 0.32,
     "F_SG_APP": 0.24,
@@ -76,7 +76,7 @@
     "win_probability": 3.86,
     "avg_position": 21.3295
   },
-  "Dumont de Chassart, Adrien": {
+  "Player 8": {
     "F_SG_Total": 0.55,
     "F_SG_OTT": -0.42,
     "F_SG_APP": -0.43,
@@ -87,7 +87,7 @@
     "win_probability": 3.42,
     "avg_position": 21.0802
   },
-  "Perez, Victor": {
+  "Player 9": {
     "F_SG_Total": 0.47,
     "SG_Under_Pressure": -0.39,
     "F_SG_OTT": 0.07,
@@ -99,7 +99,7 @@
     "win_probability": 1.16,
     "avg_position": 21.2555
   },
-  "Smith, Jordan": {
+  "Player 10": {
     "F_SG_Total": 0.38,
     "F_SG_OTT": 0.48,
     "F_SG_APP": 0.21,
@@ -122,7 +122,7 @@
     "win_probability": 1.7399999999999998,
     "avg_position": 23.7147
   },
-  "Detry, Thomas": {
+  "Player 11": {
     "F_SG_Total": 0.19,
     "SG_Under_Pressure": -0.41,
     "F_SG_OTT": 0.03,
@@ -134,7 +134,7 @@
     "win_probability": 0.69,
     "avg_position": 23.8778
   },
-  "Lahiri, Anirban": {
+  "Player 12": {
     "F_SG_Total": 0.15,
     "F_SG_OTT": 0.16,
     "F_SG_APP": 0.08,
@@ -145,7 +145,7 @@
     "win_probability": 2.22,
     "avg_position": 23.917
   },
-  "Bland, Richard": {
+  "Player 13": {
     "F_SG_Total": 0.08,
     "F_SG_OTT": -0.21,
     "F_SG_APP": 0.29,
@@ -156,7 +156,7 @@
     "win_probability": 1.32,
     "avg_position": 24.3524
   },
-  "Couvra, Martin": {
+  "Player 14": {
     "F_SG_Total": -0.06,
     "F_SG_OTT": 0.12,
     "F_SG_APP": 0.57,
@@ -167,7 +167,7 @@
     "win_probability": 1.59,
     "avg_position": 25.8899
   },
-  "Rottluff, Max": {
+  "Player 15": {
     "F_SG_Total": -0.19,
     "F_SG_OTT": 0.04,
     "F_SG_APP": 0.13,
@@ -178,7 +178,7 @@
     "win_probability": 1.3,
     "avg_position": 27.2661
   },
-  "Meronk, Adrian": {
+  "Player 16": {
     "F_SG_Total": -0.62,
     "F_SG_OTT": -0.13,
     "F_SG_APP": -0.26,

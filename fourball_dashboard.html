@@ -280,7 +280,7 @@
 
         <!-- Footer -->
         <footer class="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
-            <p>© 2024 Cleeks GC | Player Analysis Tool | Prototype Version</p>
+            <p>© 2025 Fourball | Player Analysis Tool | Prototype Version</p>
         </footer>
     </div>
     
@@ -351,10 +351,11 @@
         let playerSummaries = {};
         let allPlayers = [];
 
-        // Load player data and summaries
+        // Load player data and summaries (with cache busting)
+        const timestamp = new Date().getTime();
         Promise.all([
-            fetch('static/h2h/comparison_data.json').then(r => r.json()),
-            fetch('data/player_summaries.json').then(r => r.json())
+            fetch(`static/h2h/comparison_data.json?v=${timestamp}`).then(r => r.json()),
+            fetch(`data/player_summaries.json?v=${timestamp}`).then(r => r.json())
         ]).then(([compData, summData]) => {
             playerData = compData;
             playerSummaries = summData;
