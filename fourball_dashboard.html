@@ -86,6 +86,13 @@
                     <!-- Table will be loaded here -->
                 </div>
 
+                <!-- Mobile Hint (only visible on mobile) -->
+                <div class="mobile-hint mt-4 p-3 bg-cleeks-dark/50 rounded-lg text-center" style="display: none;">
+                    <p class="text-sm text-cleeks-accent">
+                        💡 <strong>Tip:</strong> Rotate your device to landscape to view all columns
+                    </p>
+                </div>
+
                 <!-- Legend -->
                 <div class="mt-6 p-4 bg-cleeks-dark/50 rounded-lg">
                     <p class="text-sm text-gray-300">
@@ -285,6 +292,37 @@
     </div>
     
     <script>
+        // Check authentication on page load
+        const authHeader = sessionStorage.getItem('authHeader');
+        if (!authHeader) {
+            // Not authenticated, redirect to login
+            window.location.href = '/login.html';
+        }
+
+        // Helper function for authenticated fetch
+        function authenticatedFetch(url, options = {}) {
+            const authHeader = sessionStorage.getItem('authHeader');
+            if (!authHeader) {
+                window.location.href = '/login.html';
+                return Promise.reject('Not authenticated');
+            }
+
+            options.headers = {
+                ...options.headers,
+                'Authorization': authHeader
+            };
+
+            return fetch(url, options).then(response => {
+                // If unauthorized, redirect to login
+                if (response.status === 401 || response.status === 302) {
+                    sessionStorage.removeItem('authHeader');
+                    window.location.href = '/login.html';
+                    throw new Error('Authentication failed');
+                }
+                return response;
+            });
+        }
+
         // Navigation functionality
         function showSection(sectionId) {
             // Hide all sections
@@ -292,22 +330,22 @@
             sections.forEach(section => {
                 section.classList.remove('active');
             });
-            
+
             // Remove active class from all nav buttons
             const navButtons = document.querySelectorAll('.nav-button');
             navButtons.forEach(button => {
                 button.classList.remove('active');
             });
-            
+
             // Show selected section
             document.getElementById(sectionId).classList.add('active');
-            
+
             // Add active class to clicked button
             event.target.classList.add('active');
         }
-        
+
         // Load table data
-        fetch('static/table_data.html')
+        authenticatedFetch('static/table_data.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('table-container').innerHTML = html;
@@ -339,7 +377,7 @@
             .catch(error => console.error('Error loading table:', error));
 
         // Load leaderboard table
-        fetch('static/leaderboard_table.html')
+        authenticatedFetch('static/leaderboard_table.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('leaderboard-container').innerHTML = html;
@@ -354,8 +392,8 @@
         // Load player data and summaries (with cache busting)
         const timestamp = new Date().getTime();
         Promise.all([
-            fetch(`static/h2h/comparison_data.json?v=${timestamp}`).then(r => r.json()),
-            fetch(`data/player_summaries.json?v=${timestamp}`).then(r => r.json())
+            authenticatedFetch(`static/h2h/comparison_data.json?v=${timestamp}`).then(r => r.json()),
+            authenticatedFetch(`data/player_summaries.json?v=${timestamp}`).then(r => r.json())
         ]).then(([compData, summData]) => {
             playerData = compData;
             playerSummaries = summData;

@@ -336,10 +336,33 @@
    ============================================================================
 */
 
+/* Mobile Hint - Show only on mobile */
+.mobile-hint {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
+    /* Show mobile hint on tablets and phones */
+    .mobile-hint {
+        display: block !important;
+    }
+
+    /* Vertical Navigation for Mobile */
+    nav {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        space-x: 0 !important;
+        gap: 12px !important;
+        padding-bottom: 1rem !important;
+    }
+
     .nav-button {
-        font-size: 14px;
-        padding: 8px 12px;
+        width: 100% !important;
+        font-size: 15px;
+        padding: 14px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        min-height: 48px; /* Touch-friendly size */
     }
 
     .summary-table th,
@@ -355,11 +378,34 @@
     .player-card {
         padding: 16px;
     }
+
+    /* Better header sizing on mobile */
+    header h1 {
+        font-size: 2rem !important;
+    }
+
+    header p {
+        font-size: 1rem !important;
+    }
+
+    /* Ensure cards have good spacing */
+    .section-card {
+        padding: 1.5rem !important;
+    }
 }
 
 @media (max-width: 640px) {
+    /* Even smaller screens - adjust further */
     .nav-button {
-        font-size: 12px;
-        padding: 6px 10px;
+        font-size: 14px;
+        padding: 12px 16px !important;
+    }
+
+    header h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .section-card {
+        padding: 1rem !important;
     }
 }
