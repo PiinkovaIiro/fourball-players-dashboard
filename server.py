@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lightweight HTTP server with Basic Authentication for Cleeks GC Dashboard
+Lightweight HTTP server with Basic Authentication for Fourball Dashboard
 Serves static files and the dashboard HTML with password protection
 Includes unauthenticated /health endpoint for Railway healthchecks
 """
@@ -43,7 +43,7 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
     def do_authhead(self):
         """Send authentication request header"""
         self.send_response(401)
-        self.send_header('WWW-Authenticate', 'Basic realm="Cleeks GC Dashboard"')
+        self.send_header('WWW-Authenticate', 'Basic realm="Fourball Dashboard"')
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
@@ -79,7 +79,7 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(b'{"status": "healthy", "service": "cleeks-dashboard"}')
+            self.wfile.write(b'{"status": "healthy", "service": "fourball-dashboard"}')
             return
 
         # All other routes require authentication
@@ -90,7 +90,7 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
 
         # Serve the dashboard HTML at root
         if self.path == '/' or self.path == '/index.html':
-            self.path = '/cleeks_dashboard.html'
+            self.path = '/fourball_dashboard.html'
 
         # Serve the file using parent class
         return super().do_GET()
@@ -142,11 +142,11 @@ def run_server():
     # Start server
     server = HTTPServer(('0.0.0.0', port), handler)
 
-    print(f"🚀 Cleeks GC Dashboard Server")
+    print(f"🚀 Fourball Dashboard Server")
     print(f"📍 Listening on http://0.0.0.0:{port}")
     print(f"🔐 Authentication: {username} / {'*' * len(password)}")
     print(f"✅ Health endpoint: http://localhost:{port}/health (unauthenticated)")
-    print(f"🎯 Dashboard: http://localhost:{port}/ (requires login)")
+    print(f"🎯 Dashboard: http://localhost:{port}/fourball_dashboard.html (requires login)")
     print(f"🔒 Security: Directory listings disabled, security headers enabled")
     print("\nPress Ctrl+C to stop the server")
 
