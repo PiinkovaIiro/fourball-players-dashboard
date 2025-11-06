@@ -1,0 +1,321 @@
+/*
+ * Fourball Players Analysis Tool - Component Styles
+ * ==================================================
+ * This file contains all component-specific styling and layout rules.
+ * Use theme.css to modify colors and basic appearance.
+ */
+
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================
+*/
+
+.nav-button {
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-button.active {
+    border-bottom-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.nav-button:hover {
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================================
+   CARDS & SECTIONS
+   ============================================================================
+*/
+
+.section-card {
+    background: var(--color-card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-card-border);
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    background: var(--color-card-hover);
+    border-color: var(--color-card-border-hover);
+    box-shadow: 0 8px 32px var(--color-accent-shadow);
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+
+/* ============================================================================
+   TABLES
+   ============================================================================
+*/
+
+.summary-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.summary-table thead {
+    background-color: var(--color-table-header-bg);
+    color: var(--color-table-header-text);
+}
+
+.summary-table th {
+    padding: 16px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.summary-table tbody tr {
+    background-color: var(--color-table-row-odd);
+    border-bottom: 1px solid var(--color-card-border);
+    transition: all 0.2s ease;
+}
+
+.summary-table tbody tr:nth-child(even) {
+    background-color: var(--color-table-row-even);
+}
+
+.summary-table tbody tr:hover {
+    background-color: var(--color-table-row-hover);
+    transform: translateX(4px);
+}
+
+.summary-table td {
+    padding: 14px 16px;
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.summary-table td:first-child {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+
+/* ============================================================================
+   CHARTS
+   ============================================================================
+*/
+
+.chart-container {
+    background: rgba(2, 64, 53, 0.8);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.chart-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================
+*/
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading animation */
+.loader {
+    border: 3px solid var(--color-accent-border);
+    border-radius: 50%;
+    border-top: 3px solid var(--color-accent);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* ============================================================================
+   METRIC CARDS
+   ============================================================================
+*/
+
+.metric-card {
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(246, 226, 173, 0.05) 100%);
+    border: 1px solid var(--color-accent-border);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--color-accent-shadow);
+}
+
+
+/* ============================================================================
+   HEAD-TO-HEAD COMPARISON STYLES
+   ============================================================================
+*/
+
+/* Player selection dropdown */
+.player-select {
+    background-color: var(--color-card-bg);
+    border: 2px solid var(--color-accent-border);
+    color: var(--color-text);
+    padding: 12px 16px;
+    padding-right: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F6E2AD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+}
+
+.player-select option {
+    background-color: var(--color-primary-bg);
+    color: var(--color-text);
+    padding: 12px;
+}
+
+.player-select:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-light);
+}
+
+.player-select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-border);
+}
+
+/* Player comparison cards */
+.player-card {
+    background: linear-gradient(135deg, rgba(246, 226, 173, 0.08) 0%, rgba(2, 64, 53, 0.8) 100%);
+    border: 2px solid var(--color-accent-border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(246, 226, 173, 0.2);
+}
+
+/* Statistics rows */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-card-border);
+    transition: background-color 0.2s ease;
+}
+
+.stat-row:hover {
+    background-color: rgba(246, 226, 173, 0.05);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.advantage-indicator {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+/* Swap players button */
+.swap-button {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #D4C68D 100%);
+    color: var(--color-primary-bg);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.swap-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(246, 226, 173, 0.4);
+}
+
+.swap-button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================
+*/
+
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .summary-table th,
+    .summary-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .chart-container {
+        padding: 16px;
+    }
+
+    .player-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,308 @@
+<style>
+    .leaderboard-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .leaderboard-table thead {
+        background-color: #F6E2AD;
+        color: #024035;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .leaderboard-table th {
+        padding: 16px 12px;
+        font-weight: 700;
+        text-align: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .leaderboard-table th:first-child,
+    .leaderboard-table th:nth-child(2) {
+        text-align: left;
+    }
+
+    .leaderboard-table tbody tr {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
+    }
+
+    .leaderboard-table tbody tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .leaderboard-table tbody tr:hover {
+        background-color: rgba(246, 226, 173, 0.1);
+        transform: translateX(4px);
+    }
+
+    .leaderboard-table td {
+        padding: 14px 12px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .leaderboard-table td:first-child {
+        text-align: left;
+        font-weight: 700;
+        color: #F6E2AD;
+    }
+
+    .leaderboard-table td:nth-child(2) {
+        text-align: left;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    .rank-badge {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .rank-1 { background: linear-gradient(135deg, #FFD700, #FFA500); color: #024035; }
+    .rank-2 { background: linear-gradient(135deg, #C0C0C0, #808080); color: #024035; }
+    .rank-3 { background: linear-gradient(135deg, #CD7F32, #8B4513); color: #FFFFFF; }
+    .rank-other { background: rgba(246, 226, 173, 0.2); color: #F6E2AD; }
+
+    .positive { color: #4ADE80 !important; font-weight: 600; }
+    .negative { color: #F87171 !important; font-weight: 600; }
+    .neutral { color: #FFFFFF !important; }
+
+    .metric-value {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+    }
+</style>
+
+<table class="leaderboard-table">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Total</th>
+            <th>OTT</th>
+            <th>APP</th>
+            <th>ARG</th>
+            <th>PUTT</th>
+            <th>T2G</th>
+            <th>STD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="rank-badge rank-1">1</span></td>
+            <td>Hovland, Viktor</td>
+            <td><span class="metric-value positive">+1.56</span></td>
+            <td><span class="metric-value neutral">+0.08</span></td>
+            <td><span class="metric-value positive">+0.88</span></td>
+            <td><span class="metric-value neutral">-0.10</span></td>
+            <td><span class="metric-value positive">+0.13</span></td>
+            <td><span class="metric-value positive">+0.86</span></td>
+            <td><span class="metric-value neutral">2.54</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-2">2</span></td>
+            <td>Aberg, Ludvig</td>
+            <td><span class="metric-value positive">+1.45</span></td>
+            <td><span class="metric-value positive">+0.53</span></td>
+            <td><span class="metric-value positive">+0.14</span></td>
+            <td><span class="metric-value neutral">-0.01</span></td>
+            <td><span class="metric-value positive">+0.13</span></td>
+            <td><span class="metric-value positive">+0.68</span></td>
+            <td><span class="metric-value neutral">2.71</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-3">3</span></td>
+            <td>Neergaard-Petersen, Rasmus</td>
+            <td><span class="metric-value positive">+1.06</span></td>
+            <td><span class="metric-value positive">+0.69</span></td>
+            <td><span class="metric-value positive">+0.58</span></td>
+            <td><span class="metric-value positive">+0.11</span></td>
+            <td><span class="metric-value neutral">+0.06</span></td>
+            <td><span class="metric-value positive">+1.35</span></td>
+            <td><span class="metric-value neutral">2.34</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">4</span></td>
+            <td>Hojgaard, Rasmus</td>
+            <td><span class="metric-value positive">+1.04</span></td>
+            <td><span class="metric-value positive">+0.52</span></td>
+            <td><span class="metric-value positive">+0.25</span></td>
+            <td><span class="metric-value neutral">-0.04</span></td>
+            <td><span class="metric-value positive">+0.29</span></td>
+            <td><span class="metric-value positive">+0.68</span></td>
+            <td><span class="metric-value neutral">2.63</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">5</span></td>
+            <td>Reitan, Kristoffer</td>
+            <td><span class="metric-value positive">+0.90</span></td>
+            <td><span class="metric-value positive">+0.72</span></td>
+            <td><span class="metric-value positive">+0.38</span></td>
+            <td><span class="metric-value negative">-0.20</span></td>
+            <td><span class="metric-value positive">+0.35</span></td>
+            <td><span class="metric-value positive">+0.87</span></td>
+            <td><span class="metric-value neutral">2.86</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">6</span></td>
+            <td>Olesen, Thorbjorn</td>
+            <td><span class="metric-value positive">+0.59</span></td>
+            <td><span class="metric-value positive">+0.24</span></td>
+            <td><span class="metric-value positive">+0.19</span></td>
+            <td><span class="metric-value neutral">+0.01</span></td>
+            <td><span class="metric-value positive">+0.37</span></td>
+            <td><span class="metric-value positive">+0.45</span></td>
+            <td><span class="metric-value neutral">2.52</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">7</span></td>
+            <td>Brown, Daniel</td>
+            <td><span class="metric-value positive">+0.55</span></td>
+            <td><span class="metric-value positive">+0.32</span></td>
+            <td><span class="metric-value positive">+0.24</span></td>
+            <td><span class="metric-value neutral">-0.09</span></td>
+            <td><span class="metric-value positive">+0.17</span></td>
+            <td><span class="metric-value positive">+0.51</span></td>
+            <td><span class="metric-value neutral">3.04</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">8</span></td>
+            <td>Dumont de Chassart, Adrien</td>
+            <td><span class="metric-value positive">+0.55</span></td>
+            <td><span class="metric-value negative">-0.42</span></td>
+            <td><span class="metric-value negative">-0.43</span></td>
+            <td><span class="metric-value negative">-0.12</span></td>
+            <td><span class="metric-value neutral">+0.01</span></td>
+            <td><span class="metric-value negative">-0.97</span></td>
+            <td><span class="metric-value neutral">2.88</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">9</span></td>
+            <td>Perez, Victor</td>
+            <td><span class="metric-value positive">+0.47</span></td>
+            <td><span class="metric-value neutral">+0.07</span></td>
+            <td><span class="metric-value positive">+0.47</span></td>
+            <td><span class="metric-value negative">-0.27</span></td>
+            <td><span class="metric-value positive">+0.32</span></td>
+            <td><span class="metric-value positive">+0.28</span></td>
+            <td><span class="metric-value neutral">2.27</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">10</span></td>
+            <td>Smith, Jordan</td>
+            <td><span class="metric-value positive">+0.38</span></td>
+            <td><span class="metric-value positive">+0.48</span></td>
+            <td><span class="metric-value positive">+0.21</span></td>
+            <td><span class="metric-value positive">+0.29</span></td>
+            <td><span class="metric-value neutral">+0.10</span></td>
+            <td><span class="metric-value positive">+1.04</span></td>
+            <td><span class="metric-value neutral">2.75</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">11</span></td>
+            <td>Valimaki, Sami</td>
+            <td><span class="metric-value positive">+0.21</span></td>
+            <td><span class="metric-value negative">-0.32</span></td>
+            <td><span class="metric-value positive">+0.39</span></td>
+            <td><span class="metric-value negative">-0.15</span></td>
+            <td><span class="metric-value positive">+0.50</span></td>
+            <td><span class="metric-value neutral">-0.08</span></td>
+            <td><span class="metric-value neutral">2.72</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">12</span></td>
+            <td>Detry, Thomas</td>
+            <td><span class="metric-value positive">+0.19</span></td>
+            <td><span class="metric-value neutral">+0.03</span></td>
+            <td><span class="metric-value negative">-0.27</span></td>
+            <td><span class="metric-value negative">-0.11</span></td>
+            <td><span class="metric-value negative">-0.14</span></td>
+            <td><span class="metric-value negative">-0.34</span></td>
+            <td><span class="metric-value neutral">2.31</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">13</span></td>
+            <td>Lahiri, Anirban</td>
+            <td><span class="metric-value positive">+0.15</span></td>
+            <td><span class="metric-value positive">+0.16</span></td>
+            <td><span class="metric-value neutral">+0.08</span></td>
+            <td><span class="metric-value positive">+0.22</span></td>
+            <td><span class="metric-value neutral">+0.04</span></td>
+            <td><span class="metric-value positive">+0.47</span></td>
+            <td><span class="metric-value neutral">2.92</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">14</span></td>
+            <td>Bland, Richard</td>
+            <td><span class="metric-value neutral">+0.08</span></td>
+            <td><span class="metric-value negative">-0.21</span></td>
+            <td><span class="metric-value positive">+0.29</span></td>
+            <td><span class="metric-value positive">+0.21</span></td>
+            <td><span class="metric-value positive">+0.12</span></td>
+            <td><span class="metric-value positive">+0.29</span></td>
+            <td><span class="metric-value neutral">2.62</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">15</span></td>
+            <td>Couvra, Martin</td>
+            <td><span class="metric-value neutral">-0.06</span></td>
+            <td><span class="metric-value positive">+0.12</span></td>
+            <td><span class="metric-value positive">+0.57</span></td>
+            <td><span class="metric-value neutral">-0.06</span></td>
+            <td><span class="metric-value neutral">-0.06</span></td>
+            <td><span class="metric-value positive">+0.61</span></td>
+            <td><span class="metric-value neutral">2.87</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">16</span></td>
+            <td>Rottluff, Max</td>
+            <td><span class="metric-value negative">-0.19</span></td>
+            <td><span class="metric-value neutral">+0.04</span></td>
+            <td><span class="metric-value positive">+0.13</span></td>
+            <td><span class="metric-value neutral">+0.01</span></td>
+            <td><span class="metric-value negative">-0.22</span></td>
+            <td><span class="metric-value positive">+0.18</span></td>
+            <td><span class="metric-value neutral">3.01</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">17</span></td>
+            <td>Meronk, Adrian</td>
+            <td><span class="metric-value negative">-0.62</span></td>
+            <td><span class="metric-value negative">-0.13</span></td>
+            <td><span class="metric-value negative">-0.26</span></td>
+            <td><span class="metric-value negative">-0.18</span></td>
+            <td><span class="metric-value positive">+0.58</span></td>
+            <td><span class="metric-value negative">-0.56</span></td>
+            <td><span class="metric-value neutral">2.91</span></td>
+        </tr>
+        <tr>
+            <td><span class="rank-badge rank-other">18</span></td>
+            <td>Horsfield, Sam</td>
+            <td><span class="metric-value negative">-0.73</span></td>
+            <td><span class="metric-value negative">-0.12</span></td>
+            <td><span class="metric-value neutral">+0.03</span></td>
+            <td><span class="metric-value negative">-0.43</span></td>
+            <td><span class="metric-value positive">+0.14</span></td>
+            <td><span class="metric-value negative">-0.51</span></td>
+            <td><span class="metric-value neutral">2.72</span></td>
+        </tr>
+    </tbody>
+</table>

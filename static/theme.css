@@ -1,0 +1,136 @@
+/*
+ * Fourball Players Analysis Tool - Theme Configuration
+ * =====================================================
+ * This file contains all color definitions, typography, and basic styling.
+ * Modify this file to quickly change the visual appearance of your dashboard.
+ */
+
+/* ============================================================================
+   COLOR PALETTE
+   ============================================================================
+   Change these values to customize your brand colors
+*/
+
+:root {
+    /* Primary Brand Colors */
+    --color-primary-bg: #024035;           /* Main background color (dark green) */
+    --color-primary-dark: #012A22;         /* Darker shade for depth */
+    --color-accent: #F6E2AD;                /* Primary accent color (gold) */
+    --color-text: #FFFFFF;                  /* Main text color */
+    --color-text-secondary: #D1D5DB;        /* Secondary text (gray-300) */
+
+    /* UI Elements */
+    --color-card-bg: rgba(255, 255, 255, 0.05);        /* Card background */
+    --color-card-hover: rgba(255, 255, 255, 0.08);     /* Card hover state */
+    --color-card-border: rgba(255, 255, 255, 0.1);     /* Card border */
+    --color-card-border-hover: #F6E2AD;                /* Card border on hover */
+
+    /* Accent Variations */
+    --color-accent-light: rgba(246, 226, 173, 0.1);    /* Light accent overlay */
+    --color-accent-border: rgba(246, 226, 173, 0.2);   /* Accent border */
+    --color-accent-shadow: rgba(246, 226, 173, 0.15);  /* Accent shadow */
+
+    /* Table Colors */
+    --color-table-header-bg: #F6E2AD;
+    --color-table-header-text: #024035;
+    --color-table-row-odd: rgba(255, 255, 255, 0.03);
+    --color-table-row-even: rgba(255, 255, 255, 0.06);
+    --color-table-row-hover: rgba(246, 226, 173, 0.1);
+}
+
+
+/* ============================================================================
+   TYPOGRAPHY
+   ============================================================================
+   Font family and text styling configuration
+*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text);
+}
+
+/* Import Inter font from Google Fonts (already in HTML head) */
+/* For custom fonts, add @font-face declarations here */
+
+
+/* ============================================================================
+   BASE ELEMENT STYLING
+   ============================================================================
+*/
+
+/* Links */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Selection highlight */
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-primary-bg);
+}
+
+
+/* ============================================================================
+   GRADIENT DEFINITIONS
+   ============================================================================
+   Reusable gradients for buttons, cards, and backgrounds
+*/
+
+.gradient-primary {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #D4C68D 100%);
+}
+
+.gradient-card {
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(2, 64, 53, 0.8) 100%);
+}
+
+.gradient-metric {
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(246, 226, 173, 0.05) 100%);
+}
+
+
+/* ============================================================================
+   THEME CUSTOMIZATION GUIDE
+   ============================================================================
+
+   QUICK START - Change These Values:
+   ----------------------------------
+
+   1. Main Background Color:
+      Change --color-primary-bg to your desired background color
+      Example: #1a1a2e for dark blue, #1a1a1a for dark gray
+
+   2. Accent Color:
+      Change --color-accent to your brand's primary accent
+      Example: #FF6B6B for red, #4ECDC4 for teal
+
+   3. Text Colors:
+      Change --color-text for main text
+      Change --color-text-secondary for less prominent text
+
+   4. Card Appearance:
+      Adjust --color-card-bg opacity (0.05 = very subtle, 0.15 = more visible)
+      Change --color-card-border-hover to match your accent color
+
+
+   ADVANCED CUSTOMIZATION:
+   ----------------------
+
+   - To create a light theme, set --color-primary-bg to a light color
+     and adjust --color-text to a dark color
+
+   - For a monochrome theme, use shades of the same color for all variables
+
+   - To add a background image, add to the body selector:
+     background-image: url('path/to/image.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+*/

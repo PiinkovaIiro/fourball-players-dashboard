@@ -1,0 +1,203 @@
+{
+  "Hovland, Viktor": {
+    "F_SG_Total": 1.56,
+    "F_SG_OTT": 0.08,
+    "F_SG_APP": 0.88,
+    "F_SG_ARG": -0.1,
+    "F_SG_PUTT": 0.13,
+    "F_SG_T2G": 0.86,
+    "STD": 2.54,
+    "win_probability": 7.5,
+    "avg_position": 12.9031
+  },
+  "Aberg, Ludvig": {
+    "F_SG_Total": 1.45,
+    "F_SG_OTT": 0.53,
+    "F_SG_APP": 0.14,
+    "F_SG_ARG": -0.01,
+    "F_SG_PUTT": 0.13,
+    "F_SG_T2G": 0.68,
+    "STD": 2.71,
+    "win_probability": 7.399999999999999,
+    "avg_position": 13.9998
+  },
+  "Neergaard-Petersen, Rasmus": {
+    "F_SG_Total": 1.06,
+    "F_SG_OTT": 0.69,
+    "F_SG_APP": 0.58,
+    "F_SG_ARG": 0.11,
+    "F_SG_PUTT": 0.06,
+    "F_SG_T2G": 1.35,
+    "STD": 2.34,
+    "win_probability": 3.15,
+    "avg_position": 16.5022
+  },
+  "Hojgaard, Rasmus": {
+    "F_SG_Total": 1.04,
+    "F_SG_OTT": 0.52,
+    "F_SG_APP": 0.25,
+    "F_SG_ARG": -0.04,
+    "F_SG_PUTT": 0.29,
+    "F_SG_T2G": 0.68,
+    "STD": 2.63,
+    "win_probability": 4.109999999999999,
+    "avg_position": 17.2986
+  },
+  "Reitan, Kristoffer": {
+    "F_SG_Total": 0.9,
+    "F_SG_OTT": 0.72,
+    "F_SG_APP": 0.38,
+    "F_SG_ARG": -0.2,
+    "F_SG_PUTT": 0.35,
+    "F_SG_T2G": 0.87,
+    "STD": 2.86,
+    "win_probability": 4.79,
+    "avg_position": 18.3775
+  },
+  "Olesen, Thorbjorn": {
+    "F_SG_Total": 0.59,
+    "F_SG_OTT": 0.24,
+    "F_SG_APP": 0.19,
+    "F_SG_ARG": 0.01,
+    "F_SG_PUTT": 0.37,
+    "F_SG_T2G": 0.45,
+    "STD": 2.52,
+    "win_probability": 2.06,
+    "avg_position": 20.5034
+  },
+  "Brown, Daniel": {
+    "F_SG_Total": 0.55,
+    "F_SG_OTT": 0.32,
+    "F_SG_APP": 0.24,
+    "F_SG_ARG": -0.09,
+    "F_SG_PUTT": 0.17,
+    "F_SG_T2G": 0.51,
+    "STD": 3.04,
+    "win_probability": 3.86,
+    "avg_position": 21.3295
+  },
+  "Dumont de Chassart, Adrien": {
+    "F_SG_Total": 0.55,
+    "F_SG_OTT": -0.42,
+    "F_SG_APP": -0.43,
+    "F_SG_ARG": -0.12,
+    "F_SG_PUTT": 0.01,
+    "F_SG_T2G": -0.97,
+    "STD": 2.88,
+    "win_probability": 3.42,
+    "avg_position": 21.0802
+  },
+  "Perez, Victor": {
+    "F_SG_Total": 0.47,
+    "SG_Under_Pressure": -0.39,
+    "F_SG_OTT": 0.07,
+    "F_SG_APP": 0.47,
+    "F_SG_ARG": -0.27,
+    "F_SG_PUTT": 0.32,
+    "F_SG_T2G": 0.28,
+    "STD": 2.27,
+    "win_probability": 1.16,
+    "avg_position": 21.2555
+  },
+  "Smith, Jordan": {
+    "F_SG_Total": 0.38,
+    "F_SG_OTT": 0.48,
+    "F_SG_APP": 0.21,
+    "F_SG_ARG": 0.29,
+    "F_SG_PUTT": 0.1,
+    "F_SG_T2G": 1.04,
+    "STD": 2.75,
+    "win_probability": 2.16,
+    "avg_position": 22.6176
+  },
+  "Valimaki, Sami": {
+    "F_SG_Total": 0.21,
+    "SG_Under_Pressure": 0.32,
+    "F_SG_OTT": -0.32,
+    "F_SG_APP": 0.39,
+    "F_SG_ARG": -0.15,
+    "F_SG_PUTT": 0.5,
+    "F_SG_T2G": -0.08,
+    "STD": 2.72,
+    "win_probability": 1.7399999999999998,
+    "avg_position": 23.7147
+  },
+  "Detry, Thomas": {
+    "F_SG_Total": 0.19,
+    "SG_Under_Pressure": -0.41,
+    "F_SG_OTT": 0.03,
+    "F_SG_APP": -0.27,
+    "F_SG_ARG": -0.11,
+    "F_SG_PUTT": -0.14,
+    "F_SG_T2G": -0.34,
+    "STD": 2.31,
+    "win_probability": 0.69,
+    "avg_position": 23.8778
+  },
+  "Lahiri, Anirban": {
+    "F_SG_Total": 0.15,
+    "F_SG_OTT": 0.16,
+    "F_SG_APP": 0.08,
+    "F_SG_ARG": 0.22,
+    "F_SG_PUTT": 0.04,
+    "F_SG_T2G": 0.47,
+    "STD": 2.92,
+    "win_probability": 2.22,
+    "avg_position": 23.917
+  },
+  "Bland, Richard": {
+    "F_SG_Total": 0.08,
+    "F_SG_OTT": -0.21,
+    "F_SG_APP": 0.29,
+    "F_SG_ARG": 0.21,
+    "F_SG_PUTT": 0.12,
+    "F_SG_T2G": 0.29,
+    "STD": 2.62,
+    "win_probability": 1.32,
+    "avg_position": 24.3524
+  },
+  "Couvra, Martin": {
+    "F_SG_Total": -0.06,
+    "F_SG_OTT": 0.12,
+    "F_SG_APP": 0.57,
+    "F_SG_ARG": -0.06,
+    "F_SG_PUTT": -0.06,
+    "F_SG_T2G": 0.61,
+    "STD": 2.87,
+    "win_probability": 1.59,
+    "avg_position": 25.8899
+  },
+  "Rottluff, Max": {
+    "F_SG_Total": -0.19,
+    "F_SG_OTT": 0.04,
+    "F_SG_APP": 0.13,
+    "F_SG_ARG": 0.01,
+    "F_SG_PUTT": -0.22,
+    "F_SG_T2G": 0.18,
+    "STD": 3.01,
+    "win_probability": 1.3,
+    "avg_position": 27.2661
+  },
+  "Meronk, Adrian": {
+    "F_SG_Total": -0.62,
+    "F_SG_OTT": -0.13,
+    "F_SG_APP": -0.26,
+    "F_SG_ARG": -0.18,
+    "F_SG_PUTT": 0.58,
+    "F_SG_T2G": -0.56,
+    "STD": 2.91,
+    "win_probability": 1.14,
+    "avg_position": 28.7239
+  },
+  "Horsfield, Sam": {
+    "F_SG_Total": -0.73,
+    "F_SG_OTT": -0.12,
+    "F_SG_APP": 0.03,
+    "F_SG_ARG": -0.43,
+    "F_SG_PUTT": 0.14,
+    "F_SG_T2G": -0.51,
+    "STD": 2.72,
+    "win_probability": 0.0,
+    "avg_position": 27.0
+  }
+}

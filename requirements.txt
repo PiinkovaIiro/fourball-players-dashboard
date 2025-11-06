@@ -1,0 +1,2 @@
+# Railway deployment - no external dependencies needed
+# Server uses Python's built-in http.server module

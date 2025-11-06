@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fourball Players Analysis Tool - Comprehensive golf player performance analysis and head-to-head comparisons">
+    <title>Fourball Players Analysis Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Theme and Styles -->
+    <link rel="stylesheet" href="static/theme.css">
+    <link rel="stylesheet" href="static/styles.css">
+
+    <script>
+        // Custom Tailwind theme configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cleeks-bg': '#024035',
+                        'cleeks-title': '#F6E2AD',
+                        'cleeks-text': '#FFFFFF',
+                        'cleeks-card': 'rgba(255, 255, 255, 0.05)',
+                        'cleeks-card-hover': 'rgba(255, 255, 255, 0.1)',
+                        'cleeks-accent': '#F6E2AD',
+                        'cleeks-dark': '#012A22',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cleeks-bg text-cleeks-text min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-cleeks-title mb-3">Fourball Players Analysis Tool</h1>
+            <p class="text-xl text-gray-300">Player Performance Analysis</p>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="flex justify-center mb-8 space-x-6 border-b border-white/10 pb-4">
+            <button onclick="showSection('overview')" class="nav-button active px-4 py-2 font-semibold text-lg">
+                Overview
+            </button>
+            <button onclick="showSection('leaderboard')" class="nav-button px-4 py-2 font-semibold text-lg">
+                Leaderboard
+            </button>
+            <button onclick="showSection('position-range')" class="nav-button px-4 py-2 font-semibold text-lg">
+                Position Analysis
+            </button>
+            <button onclick="showSection('top-finish')" class="nav-button px-4 py-2 font-semibold text-lg">
+                Top Finish Probabilities
+            </button>
+            <button onclick="showSection('performance')" class="nav-button px-4 py-2 font-semibold text-lg">
+                Performance Map
+            </button>
+            <button onclick="showSection('head-to-head')" class="nav-button px-4 py-2 font-semibold text-lg">
+                Head-to-Head
+            </button>
+        </nav>
+        
+        <!-- Content Sections -->
+        
+        <!-- Overview Section -->
+        <section id="overview" class="section active fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Metric Cards -->
+                <div class="metric-card p-6 rounded-xl">
+                    <h3 class="text-cleeks-accent font-semibold mb-2">Total Players Analyzed</h3>
+                    <p class="text-4xl font-bold">17</p>
+                    <p class="text-sm text-gray-300 mt-1">Replacement candidates</p>
+                </div>
+                <div class="metric-card p-6 rounded-xl">
+                    <h3 class="text-cleeks-accent font-semibold mb-2">Simulations Run</h3>
+                    <p class="text-4xl font-bold">10,000</p>
+                    <p class="text-sm text-gray-300 mt-1">Per player scenario</p>
+                </div>
+                <div class="metric-card p-6 rounded-xl">
+                    <h3 class="text-cleeks-accent font-semibold mb-2">Top Performer</h3>
+                    <p class="text-4xl font-bold" id="top-performer">-</p>
+                    <p class="text-sm text-gray-300 mt-1">Highest win probability</p>
+                </div>
+            </div>
+            
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Player Statistics Summary</h2>
+                <div class="overflow-x-auto" id="table-container">
+                    <!-- Table will be loaded here -->
+                </div>
+                <div class="mt-6 p-4 bg-cleeks-dark/50 rounded-lg">
+                    <p class="text-sm text-gray-300">
+                        <span class="text-cleeks-accent font-semibold">Note:</span> 
+                        All statistics based on 10,000 Monte Carlo simulations per player. 
+                        Percentiles represent the range of expected outcomes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="section fade-in">
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Player Performance Leaderboard</h2>
+
+                <!-- Info Cards Row -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <h3 class="text-cleeks-accent font-semibold mb-2">Weighted Metrics (F_SG)</h3>
+                        <p class="text-sm">Formula: 10% recent (20 rounds) + 60% mid-term (50 rounds) + 30% long-term (100 rounds)</p>
+                    </div>
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <h3 class="text-cleeks-accent font-semibold mb-2">Strokes Gained Categories</h3>
+                        <p class="text-sm"><strong>OTT:</strong> Off The Tee<br><strong>APP:</strong> Approach<br><strong>ARG:</strong> Around the Green</p>
+                    </div>
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <h3 class="text-cleeks-accent font-semibold mb-2">Additional Metrics</h3>
+                        <p class="text-sm"><strong>PUTT:</strong> Putting<br><strong>T2G:</strong> Tee to Green (OTT+APP+ARG)<br><strong>STD:</strong> Consistency</p>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Table Container -->
+                <div class="overflow-x-auto" id="leaderboard-container">
+                    <!-- Table will be loaded here -->
+                </div>
+
+                <!-- Legend -->
+                <div class="mt-6 p-4 bg-cleeks-dark/50 rounded-lg">
+                    <p class="text-sm text-gray-300">
+                        <span class="text-cleeks-accent font-semibold">Legend:</span>
+                        <span style="color: #4ADE80;">■ Positive values</span> indicate above-average performance.
+                        <span style="color: #F87171;">■ Negative values</span> indicate below-average performance.
+                        All metrics are standardized against tour averages.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Position Range Section -->
+        <section id="position-range" class="section fade-in">
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Position Range Analysis</h2>
+                <div class="chart-container">
+                    <img src="static/position_range.png" alt="Position Range Chart" class="w-full h-auto">
+                </div>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <p class="text-cleeks-accent font-semibold mb-1">▲ 20th Percentile</p>
+                        <p class="text-sm">Best case scenario - Player performs here or better 20% of the time</p>
+                    </div>
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <p class="text-cleeks-accent font-semibold mb-1">● Average Position</p>
+                        <p class="text-sm">Expected finishing position across all simulations</p>
+                    </div>
+                    <div class="bg-cleeks-dark/50 p-4 rounded-lg">
+                        <p class="text-cleeks-accent font-semibold mb-1">▼ 80th Percentile</p>
+                        <p class="text-sm">Worst case scenario - Player finishes here or worse 20% of the time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Top Finish Section -->
+        <section id="top-finish" class="section fade-in">
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Top Finish Probabilities</h2>
+                <div class="chart-container">
+                    <img src="static/top_finish.png" alt="Top Finish Probabilities" class="w-full h-auto">
+                </div>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-cleeks-dark/50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-cleeks-accent mb-3">Key Insights</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li>• Gold bars show Top 5 finish probability</li>
+                            <li>• White bars show Top 10 finish probability</li>
+                            <li>• Players sorted by Top 5 probability</li>
+                            <li>• All percentages based on 10,000 simulations</li>
+                        </ul>
+                    </div>
+                    <div class="bg-cleeks-dark/50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-cleeks-accent mb-3">Top Contenders</h3>
+                        <div id="top-contenders-list" class="space-y-2 text-sm">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Performance Map Section -->
+        <section id="performance" class="section fade-in">
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Multi-Factor Performance Analysis</h2>
+                <div class="chart-container">
+                    <img src="static/bubble_chart.png" alt="Performance Bubble Chart" class="w-full h-auto">
+                </div>
+                <div class="mt-6 bg-cleeks-dark/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-cleeks-accent mb-3">How to Read This Chart</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-cleeks-accent mb-1">X-Axis: F_SG_Total Rating</p>
+                            <p>Higher skill (right) correlates with better performance</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-cleeks-accent mb-1">Y-Axis: Average Position</p>
+                            <p>Lower position (top) indicates better expected finish</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-cleeks-accent mb-1">Bubble Size & Color</p>
+                            <p>Size = Top 10 probability<br>Color = Win probability (warmer = higher)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Head-to-Head Section -->
+        <section id="head-to-head" class="section fade-in">
+            <div class="section-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cleeks-title mb-6">Head-to-Head Player Comparison</h2>
+
+                <!-- Player Selection -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="player1-select" class="block text-cleeks-accent font-semibold mb-3 text-lg">Select Player 1</label>
+                        <select id="player1-select" class="player-select w-full">
+                            <option value="">Choose a player...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="player2-select" class="block text-cleeks-accent font-semibold mb-3 text-lg">Select Player 2</label>
+                        <select id="player2-select" class="player-select w-full">
+                            <option value="">Choose a player...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mb-8">
+                    <button onclick="swapPlayers()" class="swap-button">
+                        Swap Players ⇄
+                    </button>
+                </div>
+
+                <!-- Comparison Content -->
+                <div id="comparison-content" class="hidden">
+                    <!-- Radar Chart -->
+                    <div class="chart-container mb-8">
+                        <h3 class="text-2xl font-bold text-cleeks-title mb-4 text-center">Performance Radar</h3>
+                        <div id="radar-chart-container" class="text-center">
+                            <img id="radar-chart" src="" alt="Radar Chart" class="w-full max-w-3xl mx-auto">
+                        </div>
+                    </div>
+
+                    <!-- Statistical Comparison -->
+                    <div class="bg-cleeks-dark/50 p-6 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold text-cleeks-title mb-6 text-center">Statistical Comparison</h3>
+                        <div class="space-y-3" id="stats-comparison">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Player Summaries -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <!-- Player 1 Card -->
+                        <div class="player-card">
+                            <h3 class="text-2xl font-bold text-cleeks-title mb-4" id="p1-name">Player 1</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Bio</h4>
+                                    <p id="p1-bio" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Strengths</h4>
+                                    <p id="p1-strengths" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Playing Style</h4>
+                                    <p id="p1-style" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Player 2 Card -->
+                        <div class="player-card">
+                            <h3 class="text-2xl font-bold text-cleeks-title mb-4" id="p2-name">Player 2</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Bio</h4>
+                                    <p id="p2-bio" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Strengths</h4>
+                                    <p id="p2-strengths" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-cleeks-accent font-semibold mb-2">Playing Style</h4>
+                                    <p id="p2-style" class="text-sm text-gray-300">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help Text -->
+                <div id="help-text" class="mt-8 p-6 bg-cleeks-dark/50 rounded-lg">
+                    <p class="text-sm text-gray-300 text-center">
+                        <span class="text-cleeks-accent font-semibold">How to use:</span>
+                        Select two players from the dropdowns above to view a detailed head-to-head comparison including radar charts, player profiles, and statistical analysis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
+            <p>© 2024 Cleeks GC | Player Analysis Tool | Prototype Version</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav buttons
+            const navButtons = document.querySelectorAll('.nav-button');
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+        
+        // Load table data
+        fetch('static/table_data.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('table-container').innerHTML = html;
+
+                // Extract top performer from table
+                const table = document.querySelector('.summary-table');
+                if (table) {
+                    const firstRow = table.querySelector('tbody tr');
+                    if (firstRow) {
+                        const topPlayer = firstRow.cells[0].textContent;
+                        const winProb = firstRow.cells[2].textContent;
+                        document.getElementById('top-performer').textContent = topPlayer.split(',')[0];
+
+                        // Populate top contenders
+                        const rows = table.querySelectorAll('tbody tr');
+                        let contendersList = '';
+                        for (let i = 0; i < Math.min(5, rows.length); i++) {
+                            const name = rows[i].cells[0].textContent;
+                            const prob = rows[i].cells[2].textContent;
+                            contendersList += `<div class="flex justify-between">
+                                <span>${name}</span>
+                                <span class="text-cleeks-accent font-semibold">${prob}</span>
+                            </div>`;
+                        }
+                        document.getElementById('top-contenders-list').innerHTML = contendersList;
+                    }
+                }
+            })
+            .catch(error => console.error('Error loading table:', error));
+
+        // Load leaderboard table
+        fetch('static/leaderboard_table.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('leaderboard-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading leaderboard:', error));
+
+        // Head-to-Head functionality
+        let playerData = {};
+        let playerSummaries = {};
+        let allPlayers = [];
+
+        // Load player data and summaries
+        Promise.all([
+            fetch('static/h2h/comparison_data.json').then(r => r.json()),
+            fetch('data/player_summaries.json').then(r => r.json())
+        ]).then(([compData, summData]) => {
+            playerData = compData;
+            playerSummaries = summData;
+            allPlayers = Object.keys(playerData).sort();
+            console.log('Loaded player data:', allPlayers.length, 'players');
+            populatePlayerDropdowns();
+        }).catch(error => {
+            console.error('Error loading H2H data:', error);
+            // Show error message to user
+            document.getElementById('help-text').innerHTML = `
+                <p class="text-sm text-red-400 text-center">
+                    <span class="text-cleeks-accent font-semibold">Error:</span>
+                    Failed to load player data. Please make sure the server is running and data files are accessible. Check browser console for details.
+                </p>
+            `;
+        });
+
+        function populatePlayerDropdowns() {
+            const player1Select = document.getElementById('player1-select');
+            const player2Select = document.getElementById('player2-select');
+
+            console.log('Populating dropdowns with', allPlayers.length, 'players');
+
+            allPlayers.forEach(player => {
+                const option1 = document.createElement('option');
+                option1.value = player;
+                option1.textContent = player;
+                player1Select.appendChild(option1);
+
+                const option2 = document.createElement('option');
+                option2.value = player;
+                option2.textContent = player;
+                player2Select.appendChild(option2);
+            });
+
+            console.log('Player 1 select has', player1Select.options.length, 'options');
+            console.log('Player 2 select has', player2Select.options.length, 'options');
+
+            // Add change listeners
+            player1Select.addEventListener('change', updateComparison);
+            player2Select.addEventListener('change', updateComparison);
+        }
+
+        function updateComparison() {
+            const player1 = document.getElementById('player1-select').value;
+            const player2 = document.getElementById('player2-select').value;
+
+            if (!player1 || !player2 || player1 === player2) {
+                document.getElementById('comparison-content').classList.add('hidden');
+                return;
+            }
+
+            // Show comparison content
+            document.getElementById('comparison-content').classList.remove('hidden');
+
+            // Update radar chart - try both filename combinations
+            const p1Name = player1.replace(', ', '_');
+            const p2Name = player2.replace(', ', '_');
+            const radarPath1 = `static/h2h/${p1Name}_vs_${p2Name}.png`;
+            const radarPath2 = `static/h2h/${p2Name}_vs_${p1Name}.png`;
+
+            const radarImg = document.getElementById('radar-chart');
+            radarImg.src = radarPath1;
+            radarImg.onerror = function() {
+                // Try the reverse combination
+                this.onerror = function() {
+                    // If both don't exist, show error
+                    this.onerror = null;
+                    this.src = '';
+                    this.alt = 'Radar chart not available for this combination. Charts are pre-generated for top player matchups.';
+                };
+                this.src = radarPath2;
+            };
+
+            // Update player names
+            document.getElementById('p1-name').textContent = player1;
+            document.getElementById('p2-name').textContent = player2;
+
+            // Update player summaries
+            const p1Summary = playerSummaries[player1] || {};
+            const p2Summary = playerSummaries[player2] || {};
+
+            document.getElementById('p1-bio').textContent = p1Summary.bio || 'No bio available';
+            document.getElementById('p1-strengths').textContent = p1Summary.strengths || 'No information available';
+            document.getElementById('p1-style').textContent = p1Summary.playing_style || 'No information available';
+
+            document.getElementById('p2-bio').textContent = p2Summary.bio || 'No bio available';
+            document.getElementById('p2-strengths').textContent = p2Summary.strengths || 'No information available';
+            document.getElementById('p2-style').textContent = p2Summary.playing_style || 'No information available';
+
+            // Update statistical comparison
+            updateStatsComparison(player1, player2);
+        }
+
+        function updateStatsComparison(player1, player2) {
+            const p1Data = playerData[player1] || {};
+            const p2Data = playerData[player2] || {};
+
+            const stats = [
+                { label: 'F_SG Total', key: 'F_SG_Total', format: (v) => v.toFixed(2) },
+                { label: 'SG Under Pressure', key: 'SG_Under_Pressure', format: (v) => v.toFixed(2) },
+                { label: 'Off The Tee', key: 'F_SG_OTT', format: (v) => v.toFixed(2) },
+                { label: 'Approach', key: 'F_SG_APP', format: (v) => v.toFixed(2) },
+                { label: 'Around the Green', key: 'F_SG_ARG', format: (v) => v.toFixed(2) },
+                { label: 'Putting', key: 'F_SG_PUTT', format: (v) => v.toFixed(2) },
+                { label: 'Tee to Green', key: 'F_SG_T2G', format: (v) => v.toFixed(2) },
+                { label: 'Consistency (STD)', key: 'STD', format: (v) => v.toFixed(2), lowerIsBetter: true },
+                { label: 'Win Probability', key: 'win_probability', format: (v) => v.toFixed(1) + '%' },
+                { label: 'Avg Position', key: 'avg_position', format: (v) => v.toFixed(1), lowerIsBetter: true }
+            ];
+
+            let html = '';
+            stats.forEach(stat => {
+                const p1Val = p1Data[stat.key] || 0;
+                const p2Val = p2Data[stat.key] || 0;
+
+                let p1Indicator = '';
+                let p2Indicator = '';
+
+                if (stat.lowerIsBetter) {
+                    if (p1Val < p2Val) p1Indicator = '<span class="advantage-indicator" style="color: #F6E2AD;">★</span>';
+                    else if (p2Val < p1Val) p2Indicator = '<span class="advantage-indicator" style="color: #F6E2AD;">★</span>';
+                } else {
+                    if (p1Val > p2Val) p1Indicator = '<span class="advantage-indicator" style="color: #F6E2AD;">★</span>';
+                    else if (p2Val > p1Val) p2Indicator = '<span class="advantage-indicator" style="color: #F6E2AD;">★</span>';
+                }
+
+                html += `
+                    <div class="stat-row">
+                        <div class="text-left" style="flex: 1;">
+                            <span class="font-semibold">${stat.format(p1Val)}</span>${p1Indicator}
+                        </div>
+                        <div class="text-center text-cleeks-accent font-bold" style="flex: 1;">
+                            ${stat.label}
+                        </div>
+                        <div class="text-right" style="flex: 1;">
+                            ${p2Indicator}<span class="font-semibold">${stat.format(p2Val)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('stats-comparison').innerHTML = html;
+        }
+
+        function swapPlayers() {
+            const player1Select = document.getElementById('player1-select');
+            const player2Select = document.getElementById('player2-select');
+
+            const temp = player1Select.value;
+            player1Select.value = player2Select.value;
+            player2Select.value = temp;
+
+            updateComparison();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+# Railway Deployment Ignore File
+# Exclude files not needed for serving the dashboard
+
+# Large root-level images (not used by dashboard)
+*.png
+!static/*.png
+!static/**/*.png
+
+# Development and local files
+.env
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Simulation results (regenerated locally)
+simulation_results/
+
+# Large raw data files (keep only essential JSON)
+data/*.csv
+data/all_players_raw_data_*.csv
+data/Manually_edited_Historical_Raw_Data.csv
+
+# Backup files
+data/*_backup*.json
+
+# Local development files
+.claude/
+.git/
+.gitignore
+
+# Documentation (not needed for serving)
+*.md
+!README.md
+
+# Scripts not needed for serving
+golf_predictor.py
+multi_player_simulator.py
+generate_*.py
+visualize_*.py
+player_analyzer.py
+fetch_*.py
+merge_*.py
+create_*.py
+update_*.py
+apply_*.py
+process_*.py
+analyze_*.py
+prepare_*.py
+test_*.py
+add_*.py
+run_*.py
+workflow_guide.sh
+*.gs
+
+# App scripts (Flask app not used)
+app.py
+
+# Config files not needed
+players_config.yaml
+
+# Logs
+*.txt
+!requirements.txt
+
+# Tournament data (regenerated locally)
+tournament_*.csv
+field_impact_analysis.csv
+replacement_players.csv
+player_predictions_input.csv
+player_comparison_summary.csv
+viz_data.csv
+simulation_log.txt
