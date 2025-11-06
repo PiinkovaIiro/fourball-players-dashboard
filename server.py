@@ -73,7 +73,7 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
         return username == self.auth_username and password == self.auth_password
 
     def do_GET(self):
-        """Handle GET requests with authentication (except /health)"""
+        """Handle GET requests with authentication (except /health and /login.html)"""
         # Health check endpoint - no authentication required
         if self.path == '/health':
             self.send_response(200)
@@ -82,15 +82,20 @@ class AuthHTTPRequestHandler(SimpleHTTPRequestHandler):
             self.wfile.write(b'{"status": "healthy", "service": "fourball-dashboard"}')
             return
 
+        # Login page - no authentication required
+        if self.path == '/login.html' or self.path == '/':
+            if self.path == '/':
+                # Redirect root to login page
+                self.path = '/login.html'
+            return super().do_GET()
+
         # All other routes require authentication
         if not self.check_auth():
-            self.do_authhead()
-            self.wfile.write(b'Authentication required')
+            # Redirect to login page instead of showing basic auth
+            self.send_response(302)
+            self.send_header('Location', '/login.html')
+            self.end_headers()
             return
-
-        # Serve the dashboard HTML at root
-        if self.path == '/' or self.path == '/index.html':
-            self.path = '/fourball_dashboard.html'
 
         # Serve the file using parent class
         return super().do_GET()
